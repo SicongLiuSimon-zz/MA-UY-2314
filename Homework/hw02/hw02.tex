@@ -1,0 +1,138 @@
+\documentclass[12pt]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath, amssymb, amsthm, graphicx, hyperref}
+\usepackage{enumerate}
+\usepackage{fancyhdr}
+\usepackage{multirow, multicol}
+\usepackage{tikz}
+\pagestyle{fancy}
+\fancyhead[RO]{Sicong Liu}
+\fancyhead[LO]{MA-UY 2314: Discrete Mathematics}
+\usepackage{comment}
+\begin{document}
+\begin{center}
+  \textbf{\Large Homework 2}\\
+  \vspace{.15in}
+\fi
+\end{center}
+\noindent 1.(a) 
+\noindent \textbf{Pf:} Assume $x$ and $y$ are consecutive perfect squares.\\
+Counterexample: \\
+$x=0$, $x=a^{2}$, $a=0$\\
+$y=(a+1)^{2} \to 1^{2}$\\
+$\to y=1$\\
+\vspace{.15in}
+$x-y=0-1=-1 \to -1$ is not even\\ 
+(b)
+\noindent \textbf{Pf:}  Assume $x$ and $y$ are consecutive perfect squares. $x=a^{2}, y=(a+1)^&{2}$\\
+NTS $x-y=2k-1 $ where $ k\in \mathbb{Z}$
+\[
+\begin{aligned}
+x-y&=a^{2}-(a+1)^{2}\\
+&=a^{2}-a^{2}-1-2a\\
+&=-2a-1\\
+&=2k-1 \; when \; k=-a\\
+\vspace{.15in}
+\end{aligned}
+\]
+2. 
+\noindent \textbf{Pf:}  Assume $a|d$ and $a |e$.
+$d=ma, e=na$ where $ m\in \mathbb{Z} \wedge$, where $ n\in \mathbb{Z}$ \\
+NTS $ db + ec=ka$ where $ k\in \mathbb{Z}$\\ 
+\[
+\begin{aligned}
+db+ec&=ma \times b+na \times c\\
+&=a \times mb + a \time nc\\
+&=a(mb+nc)\\
+&=ka \; when \; k=mb+nc\\
+\vspace{.15in}
+\end{aligned}
+\]
+3. 
+\noindent \textbf{Pf:} Assume $a$ is an integer.\\
+NTS $ 2 | (a^{2}-a) $\\ 
+$a^{2}-a&=a(a-1)$\\
+case 1:if a is even $\to$ $a=2m$, where $m\in \mathbb{Z}$\\
+$a^{2}-a=2m(2m-1)$
+$\to 2 | 2m(2m-1)$\\
+$\to 2 | (a^{2}-a)$, when a is even\\
+case 2:if a is odd $\to$ $a=2n+1$, where $n\in \mathbb{Z}$\\
+$a^{2}-a=(2n+1)(2n+1-1)=2n(2n+1)$
+$\to 2 | 2n(2n+1)$\\
+$\to 2 | (a^{2}-a)$, when a is odd\\
+\vspace{.15in}
+Therefore, $ 2 | (a^{2}-a) $ \\
+
+
+\noindent 4.
+counterexample: \\
+$x = F, y = T$\\
+$x \to y= F \to T = T, -y \to -x= F \to T$\\
+\vspace{.15in}
+$x \leftrightarrow y = F \leftrightarrow T = F$\\
+
+
+\noindent  5.
+\noindent \textbf{Pf:} Assume that $x$ and $y$ are integers with the same parity.\\
+NTS $x+y=2k$ where $k\in \mathbb{Z}$ 
+when x and y are even\\
+$\to$ $x=2m,y=2n$ where $m\in \mathbb{Z} \wedge n\in \mathbb{Z}$ \\
+\[
+\begin{aligned}
+x+y&=2m+2n\\&=2(m+n)\\&=2k\; when\; k=m+n\\
+\end{aligned}
+\]
+
+\noindent when x and y are odd\\
+$\to$ $x=2m+1,y=2n+1$ where $m\in \mathbb{Z} \wedge n\in \mathbb{Z}$ \\
+\[
+\begin{aligned}
+x+y&=(2m+1)+(2n+1)\\&=2m+2n+2\\&=2(m+n+1)\\&=2k\; when\; k=m+n+1\\
+\end{aligned}
+\]
+
+\noindent 6.
+\noindent \textbf{Pf:} Assume that $x, y, z, w$ are consecutive integers.\\
+$\to x=a. y=a+1, z=a+2, w=a+3 $ where $a\in \mathbb{Z}$\\
+NTS $x \times y \times \ z \time w = k^{2}-1$ where $k \in \mathbb{Z}$
+\[
+\begin{aligned}
+x \times y \times \ z \time w &= a(a+1)(a+2)(a+3)\\
+&=a(a+3)\times (a+1)(a+2)\\
+&=(a^{2}+3a)(a^{2}+3a+2)\\
+m=a^{2}+3a\\
+m(m+2)&=(m+1)^{2}-1\\
+&=k^{2}-1 \; where \;k=m+1
+\end{aligned}
+\]
+\noindent 7.
+\noindent \textbf{Pf:} Assume that $a,b,c$ are integers.\\
+counterexample: $a=2, b=3, c=12$\\
+\vspace{.15in}
+$a|c, b|c, a+b=, 5|12=F \to (a+b)|c=F$
+
+\noindent 8.
+\noindent \textbf{Pf:} Assume that $n\in \mathbb{Z}$\\
+counterexample: $n=5, n^{2}-n+1=25-5+1=21,$\\
+\vspace{.15in}
+$3|21, 21 is not prime$\\
+
+\noindent 9.
+\noindent \textbf{Pf:} Assume that $x$ is an odd integer. \\
+$x=2k+1$ where $k \in \mathbb{Z}$\\
+NTS $x^{2}=8m+1$\\
+\[
+\begin{aligned}
+x^{2}&=(2k+1)^{2}\\&=4k^{2}+4k+1\\
+\end{aligned}
+\]
+NTS $4k^{2}+4k+1=8m+1$\\
+$4k^{2}+4k=8m$\\
+$k^{2}+K=2m$\\
+$k(k+1)=2m$\\
+case 1: if k is even $\to k=2n$ where $n\in \mathbb{Z}$\\
+$2n(2n+1)=4n^{2}+2n=2(n^{2}+n)=2m$ when $m=n^{2}+n$\\
+case 2: if k is odd $\to k=2n+1$ where $n\in \mathbb{Z}$\\
+$(2n+1)(2n+2)=4n^{2}+6n+2=2(n^{2}+3n+1)=2m$ when $m=n^{2}+3n+1$\\
+Therefore, $x^{2}=8m+1$
+\end{document}

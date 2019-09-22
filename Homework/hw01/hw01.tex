@@ -1,0 +1,201 @@
+\documentclass[12pt]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath, amssymb, amsthm, graphicx, hyperref}
+\usepackage{enumerate}
+\usepackage{fancyhdr}
+\usepackage{multirow, multicol}
+\usepackage{tikz}
+\pagestyle{fancy}
+\fancyhead[RO]{Sicong Liu}
+\fancyhead[LO]{MA-UY 2314: Discrete Mathematics}
+\usepackage{comment}
+
+\begin{document}
+
+\noindent 3.1(a) $3|100$ = \textbf{F}.  There is no $k \in \mathbb{Z}$ such that $100 = 3k$.
+\vspace{.15in}
+
+\noindent 3.1(b) $3|99$= \textbf{T}.  Notice that $99 = 3k$ where $k = 33$.  
+\vspace{.15in}
+
+\noindent 3.1(c) $3|-3$ = \textbf{T}.  Notice that $-3 = 3k$ where $k=-1$.
+\vspace{.15in}
+
+\noindent 3.1(d) $-5|-5$ = \textbf{T}.  Notice that $-5 = -5k$ where $k=1$.
+\vspace{.15in}
+
+\noindent 3.1(e) $-2|-7$ = \textbf{F}.  There is no $k \in \mathbb{Z}$ such that $-7 = -2k$.
+\vspace{.15in}
+
+\noindent 3.1f) $0|4$ = \textbf{F}.  There is no $k \in \mathbb{Z}$ such that $4 = 0k$.
+\vspace{.15in}
+
+\noindent 3.1(g) $-4|-0$ = \textbf{T}.  Notice that $0 = 4k$ where $k=0$.
+\vspace{.15in}
+
+\noindent 3.1(h) $-0|-0$ = \textbf{T}.  Notice that $0 = 0k$ where $k \in \mathbb{Z}$.
+\vspace{.3in}
+
+\noindent 3.5 \\
+Prove: Every integer is a rational number\\
+Assume ($a \in \mathbb{Z}$) \\ 
+NTS\;$a=kb$ where ($b \in \mathbb{Z}$)   $\wedge$ ($b \neq 0$)\\
+Let $b=1$ such that ($b \in \mathbb{Z}$) \\
+Notice that $a = ab$ where $b=1$ $ $\\
+Disprove: All rational numbers are integers\\
+Counterexample: $a=2$, $b=3$, $a/b\in \mathbb{Z}$ = \textbf{F} $ $\\
+\vspace{.3in}
+
+\noindent 3.12(e) $100$ has 9 positive divisors: 1,2,4,5,10,20,25,50,100.
+\vspace{.15in}
+
+\noindent 3.12(f) $1000000$ has 49 positive divisors.
+\vspace{.15in}
+
+\noindent 3.12(k) $1\times2\times3\times4\times5\times6\times7\times8$ has 96 positive divisors.
+\vspace{.15in}
+
+\noindent 3.12(l) 0 has infinite positive divisors.
+\vspace{.15in}
+
+\noindent 7.10(c) 
+\[ 
+\begin{tabular}{|c|c|c|c|c|c|c|c|} 
+\hline   
+x & y & x $\vee$ y & -x & -y & x $\wedge$ (-y) & (-x) $\wedge$ y & x $\wedge$ (-y) $\vee$  (-x) $\wedge$ y\\ 
+\hline
+T & T & T & F & F & F & F & F \\
+\hline 
+T & F & T & F & T & T & F & T \\
+\hline
+F & T & T & T & F & F & T & T\\
+\hline
+F & F & F & T & T & F & F & F\\
+\hline
+\end{tabular} 
+\] 
+The truth table of x $\vee$ y and x $\wedge$ (-y) $\vee$  (-x) $\wedge$ y is not the same\\
+x $\vee$ y is not logically equivalent to x $\wedge$ (-y) $\vee$  (-x) $\wedge$ y
+\vspace{.3in}
+
+\noindent 7.5
+\[ 
+\begin{tabular}{|c|c|c|c|c|c|} 
+\hline   
+x & y & x $\leftrightarrow$ y & -x & -y & (-x) $\leftrightarrow$ (-y)\\
+\hline
+T & T & T & F & F & T\\
+\hline 
+T & F & F & F & T & F\\
+\hline
+F & T & F & T & F & F\\
+\hline
+F & F & T & T & T & T\\
+\hline
+\end{tabular} 
+\] 
+
+\vspace{.3in}
+
+\noindent 7.8
+\[ 
+\begin{tabular}{|c|c|c|c|c|c|c|c|c|} 
+\hline   
+x & y & z & x $\vee$ y & x $\vee$ y $\to$ z & x $\to$ z & y $\to$ z & (x $\to$ z) $\wedge$ (y $\to$ z)\\
+\hline
+T & T & T & T & T & T & T & T \\
+\hline 
+T & F & F & T & F & F & T & F \\
+\hline
+F & T & F & T & F & T & F & F\\
+\hline
+F & F & T & F & T & T & T & T\\
+\hline
+F & T & T & F & T & T & T & T\\
+\hline
+T & F & T & T & T & T & T & T\\
+\hline
+T & T & F & T & F & F & F & F\\
+\hline
+F & F & F & F & T & T & T & T\\
+\hline
+\end{tabular} 
+\] 
+
+\vspace{.3in}
+\noindent 7.11(a)
+\[
+\begin{aligned}
+(x \vee y) \vee (x \vee (-y))\\
+&=(x \vee x) \vee (y \vee (-y))\\
+&=T \vee T\\
+&=T \\
+\end{aligned}
+\]
+
+\vspace{.15in}
+\noindent 7.11(b) 
+\[
+\begin{aligned}
+(x \wedge (x \rightarrow y)) \to y &= (x \wedge ((-x) \vee y)) \to y\\
+&=(((-x) \wedge x) \vee (y \wedge x)) \to y\\
+&=(F \vee (y \wedge x)) \to y\\
+&=(y \wedge x) \to y\\
+&=-(y \wedge x) \vee y\\
+&=(-x) \vee ((-y) \vee y)\\
+&=(-x) \vee T\\
+&=T \\
+\end{aligned}
+\]
+
+\vspace{.15in}
+\noindent 7.11(h)
+\[
+\begin{aligned}
+Let\; A=(x \to y) \;and\; B=(x \to -y)\\
+(A \wedge B) \to (-x)
+&=-(A \wedge B) \vee (-x)\\
+&=((-A) \vee (-B)) \vee(-x)\\
+&=(-A) \vee ((-B) \vee (-x)))\\
+&=(-A) \vee ((x \to -y) \vee (-x))\\
+&=(-A) \vee (-((-x) \vee (-y)) \vee (-x))\\
+&=(-A) \vee (-(x \wedge y) \vee (-x)) \\
+&=(-A) \vee (-x \vee x) \wedge (-x \vee y)\\
+&=(-A) \vee (T \wedge (-x \vee y)\\
+&=(-A) \vee A\\
+&=T \\
+\end{aligned}
+\]
+\vspace{.15in}
+\noindent 7.13(a)
+\[
+\begin{aligned}
+(x \vee y) \wedge (x \vee -y) \wedge -x\\
+&=(x \vee y)\wedge( (x \wedge -x) \vee (-x \wedge -y))\\
+&=(x \vee y)\wedge (F \vee (-x \wedge -y))\\
+&=(x \vee y)\wedge (-x \wedge -y)\\
+&=(x \wedge (-x \wedge -y)) \vee (y \wedge (-x \wedge -y))\\
+&=(F\wedge y) \vee (F \wedge -x)\\
+&=F \vee F\\
+&=F  \\
+\end{aligned}
+\]
+\vspace{.15in}
+\noindent 7.13(c)
+\[
+\begin{aligned}
+((x \to y) \wedge (-x \to -y)) \wedge -y
+&=((x \to y) \wedge ((x \vee y) \wedge -y)\\
+&=((x \to y) \wedge ((x \wedge -y) \vee (y\wedge -y))\\
+&=((x \to y) \wedge ((x \wedge -y) \vee F)\\
+&=((x \to y) \wedge (x \wedge -y)\\
+&=((-x \vee y)\wedge x) \wedge -y\\
+&=((-x \wedge x) \vee (y \wedge x)) \wedge -y\\
+&=(F \vee (y \wedge x))\wedge -y\\
+&=(y \wedge x) \wedge -y\\
+&= (y \wedge -y) \wedge x\\
+&= F \wedge x\\
+&= F  \\
+\end{aligned}
+\]
+\end{document}
