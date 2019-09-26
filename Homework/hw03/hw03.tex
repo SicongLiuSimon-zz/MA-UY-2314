@@ -1,0 +1,111 @@
+\documentclass[12pt]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath, amssymb, amsthm, graphicx, hyperref}
+\usepackage{enumerate}
+\usepackage{fancyhdr}
+\usepackage{multirow, multicol}
+\usepackage{tikz}
+\pagestyle{fancy}
+\fancyhead[RO]{Sicong Liu}
+\fancyhead[LO]{MA-UY 2314: Discrete Mathematics}
+\usepackage{comment}
+\newif\ifshow
+\showfalse
+\begin{document}
+
+\begin{center}
+\textbf{\Large Homework 3}\\
+\end{center}
+\hrule
+
+\vspace{0.2cm}
+\begin{enumerate}
+\item
+\noindent 8.7(a) For every photo, there are 2 websites to post.\\
+There are 30 photos.\\
+Therefore, the total ways are: $2^{30}$
+\vspace{.15in}
+
+\noindent 8.9 Assume the black rook is placed first.\\
+For every square of the black rook, the white rook has $64-15$ squares to place.\\
+There are 64 squares for black rock to place, so the total ways are:\\
+$(64-15) \times 64=3136$
+\vspace{.15in}
+
+\item
+\noindent 8.16 The first digit has 10 choices of digits.\\
+The second, third and last one have 7 choices.\\
+$10 \times 7^{3}=3430$
+\vspace{.15in}
+
+\noindent 8.19 The first card has 52 choices. \\
+The second one has $(52/4-1) \times 3 = 36$ choices.\\
+The third one has $(52/4-2) \times 2 = 22$ choices.\\
+The last one has $(52/4-3) = 10$ choices.\\
+$52 \times 36 \times 22 \times 10=411840$
+\vspace{.15in}
+
+\item 
+\noindent $2655!+2, 2655+3,  \dots 2655!+2655,2655!+2656$\\
+$2|(2655!+2), 3|(2655!+3), \dots 2655|(2655!+2655), 2|(2655+2656)$\\
+
+
+
+\item
+$B=\{\emptyset\}$, $C=\{\emptyset,\{\emptyset\}\}$, $D=\{\emptyset,\{\emptyset\},\{\emptyset,\{\emptyset\}\}\}$\\
+$2^{D}=\{\emptyset,
+\{\emptyset,\{\emptyset\}\},
+\{\emptyset,\{\emptyset,\{\emptyset\}\}\},
+\{\{\emptyset\},\{\emptyset,\{\emptyset\}\}\},
+\{\emptyset,\{\emptyset\},\{\emptyset,\{\emptyset\}\}\}\}$
+
+\item
+\noindent 10.1(g) $\{\{1\},\{2\},\{3\},\{4\},\{5\}\}$\\
+\noindent 10.3(c) $A=\{ x \in \mathbb{Z}: x \in \emptyset\}$, \;  $|A|=0$\\
+\noindent 10.3(d) $A=\{ x \in \mathbb{Z}: \emptyset\ \in x\}$,\; $|A|=0$\\
+\noindent 10.3(e) $A=\{ x \in \mathbb{Z}: \emptyset\ \subseteq \{x\}\}$,\; $|A|=\infty$\\
+\noindent 10.3(f) $A=2^{2^{\{1,2,3\}}}$,\; $|A|=2^{8}$\\
+\noindent 10.3(g) $A=\{ x \in 2^{\{1,2,3,4\}}: |x|=1\}$,\;$A=\{\{1\},\{2\},\{3\},\{4\}\}$,\; $|A|=4$\\
+
+\item
+\noindent 10.4(a) $2 \in \{1,2,3\}$\\
+\noindent 10.4(b) ${2} \subseteq \{1,2,3\}$\\
+\noindent 10.4(c) $\{2\} \in \{\{1\},\{2\},\{3\}\}$\\
+\noindent 10.4(d) $\emptyset \subseteq \{1,2,3\}$\\
+\noindent 10.4(e) $\mathbb{N} \subseteq \mathbb{Z}$\\
+\noindent 10.4(f) $\{2\} \subseteq \mathbb{Z}$\\
+\noindent 10.4(g) $\{2\} \in 2^{\mathbb{Z}}$\\
+
+\item
+\noindent 10.5(a) $A=\{1\}$, $B=\{1,2\}$, $C=\{1,2,3\}$\\
+\noindent 10.5(b) $A=\{1\}$, $B=\{\{1\},2\}$, $C=\{\{1\},2,3\}$\\
+\noindent 10.5(c) $A=\{1\}$, $B=\{\{1\},2\}$, $B=\{\{\{1\},2\},3\}$\\
+\noindent 10.5(d) $A=\{1\}$, $B=\{1,2\}$,  $C=\{\{1,2\},3\}$\\
+\noindent 10.6(a) $A=\{1\}$\\
+\noindent 10.6(b) $A=\{1\}$\\
+\noindent 10.6(c) $A=\emptyset$\\
+\noindent 10.6(d) No solution, since no set belongs to empty set.\\
+
+\item
+\noindent 10.12 Let $x \in C$, $kx = 12$, where $k \in \mathbb{Z}$\\
+NTS $mx=36$, where $m \in \mathbb{Z}$\\
+$kx=12 \to (3k)x=36$\\
+$mx=36$ when $m=3k$\\
+$x|36 \to x \in D \to C \subseteq D$\\
+
+\noindent 10.14 $x=\emptyset$, $\emptyset \subseteq \{\emptyset\}$\\
+
+\noindent 10.15 
+$(3,4,-5) \in P$, since $3^{2}+4^{2}=(-5)^{2}$\\
+There are no x any y such that $-5=x^{2}+y^{2}$ when $x \in \mathbb{Z}$ and $y \in \mathbb{Z}$\\
+$(3,4,-5) \in T =F \to P \neq T$ \\
+
+\item
+\noindent (a) Assume $a \in A \to a=6k-5$\\
+$a=6(k-1)+1=3(2k-2)+1=3m+1$, when $m=2k-2$\\
+$\to a \in B \to A \subseteq B$
+(b) Counterexample: Assume $b=10=3\times 3+1 \to b \in B$\\
+There is no value of k that $6k-5=10$ when $k \in \mathbb{Z}$\\
+$\to b \in A=F \to B \subseteq A=F$\\
+\end{enumerate}
+\end{document}
