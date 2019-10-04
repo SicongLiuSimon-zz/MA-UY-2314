@@ -1,0 +1,195 @@
+\documentclass[12pt]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath, amssymb, amsthm, graphicx, hyperref}
+\usepackage{enumerate}
+\usepackage{fancyhdr}
+\usepackage{multirow, multicol}
+\usepackage{tikz}
+\pagestyle{fancy}
+\fancyhead[RO]{Sicong Liu}
+\fancyhead[LO]{MA-UY 2314: Discrete Mathematics}
+\usepackage{comment}
+\newif\ifshow
+\showfalse
+\begin{document}
+
+\begin{center}
+\textbf{\Large Homework 4}\\
+\end{center}
+\hrule
+
+\vspace{0.2cm}
+\begin{enumerate}
+\item
+\noindent 11.2(a) There is an integer that is not prime, $\exists x \in \mathbb{Z}$; x is not prime\\
+\noindent 11.2(b) All integers are either prime or composite, $\forall x \in \mathbb{Z}$; x is either prime or composite\\
+\noindent 11.2(c) All integers have a square that is not 2, $\forall x \in \mathbb{Z}$; $x^{2} \neq 2$\\
+\noindent 11.2(d) There is an integer that is not divisible by 5, $\exists x \in \mathbb{Z}$; $5|x =F$\\
+\noindent 11.2(e) All integers are not divisible by 7,  $\forall x \in \mathbb{Z}$; $7|x =F$\\
+\noindent 11.2(f) There is an integer that has a square that is negative, $\exists x \in \mathbb{Z}$; $x^{2} <0$\\
+\noindent 11.2(g) There is an integer that the products with any integers are not 1, \\$\exists x \in \mathbb{Z}$;$\forall y \in \mathbb{Z}$; $xy \neq 1$\\
+\noindent 11.2(h) For any two integers, the quotient of them is not equal to 10, \\$\forall x \in \mathbb{Z}$;$\forall y \in \mathbb{Z}$; $x/y \neq 10$\\
+\noindent 11.2(i) For any integers, there exists another integer that the product of them is not 0,\\ $\forall x \in \mathbb{Z}$;$\exsits y \in \mathbb{Z}$; $xy \neq 0$\\
+\noindent 11.2(j) There is an integer that any integers are smaller or equal to it. \\$\exists x \in \mathbb{Z}$;$\forall y \in \mathbb{Z}$; $y \leq x$\\
+\noindent 11.2(k) Sombody does not love everybody, \\$exists \; a \;person\; x$;$\forall \;person\; y$; x does not love y\\
+\noindent 11.4(a) F (b) T (c) F (d) T (e) F (f) T (g) T (h) T\\
+
+\item 
+\noindent 11.5(a) $\exists x \in \mathbb{Z}$; $x \geq 0$\\ There is an integer that is larger than or equal to 0\\
+\noindent 11.5(b) $\forall x \in \mathbb{Z}$; $x \neq x+1$\\ All integers are not equal to the next integer\\
+\noindent 11.5(c) $\forall x \in \mathbb{N}$; $x \leq 10$\\ All national numbers are less than or equal to 10\\
+\noindent 11.5(d) $\exists x \in \mathbb{N}$; $x+x \neq 2x$\\ There is a national number which the sum of it with itself is not equal to the twice of it\\
+\noindent 11.5(e) $\forall x \in \mathbb{Z}$; $\exists y \in \mathbb{Z}$;$x \leq y$\\ For all integers, there exists an integer less than or equal to it\\
+\noindent 11.5(f) $\exists x \in \mathbb{Z}$; $\exists y \in \mathbb{Z}$; $x \neq y$\\ There exist an integer that is not equal to another integer\\
+\noindent 11.5(g)  $\exists x \in \mathbb{Z}$; $\forall y \in \mathbb{Z}$; $x+y \neq 0$\\ There exist an integer that the sum of it and any other integer is zero\\
+\noindent 11.6 Both of the statements are the same thing. The order of them does not matter.
+\noindent 11.7(a) True, x can only be 2\\
+\noindent 11.7(b) False, x can be 2 or -2\\
+\noindent 11.7(c) True, x can only be $\sqrt{3}$\\
+\noindent 11.7(d) True, x can only be 0\\
+\noindent 11.7(e) True, x can only be 1\\
+
+\item
+\noindent 12.1(a) $\{1,2,3,4,5,6,7\}$\\
+\noindent 12.1(b) $\{4,5\}$\\
+\noindent 12.1(c) $\{1,2,3\}$\\
+\noindent 12.1(d) $\{6,7\}$\\
+\noindent 12.1(e) $\{1,2,3,6,7\}$\\
+\noindent 12.1(f) $\{(1,4),(1,5),(1,6),(1,7),(2,4),(2,5),(2,6),(2,7),(3,4),(3,5),(3,6),(3,7),(4,4),(4,5),(4,6),(4,7),(5,4),(5,5),(5,6),(5,7)\}$\\
+\noindent 12.1(g) $\{(4,1),(4,2),(4,3),(4,4),(4,5),(5,1),(5,2),(5,3),(5,4),(5,5),(6,1),(6,2),(6,3),(6,4),(6,5),(7,1),(7,2),(7,3),(7,4),(7,5)\}$\\
+
+\item
+\noindent \textbf{Proof:}  Assume that $x \in (A \cup B) - (A \cap B)$. \\
+NTS $x \in A \triangle B$\\
+$\to (x \in A \vee x \in B) \wedge (x \notin A \vee x\notin B)$\\
+$\to (x \in A) \wedge (x \notin A \vee x\notin B)) \vee (x \in B) \wedge (x \notin A \vee x\notin B)$\\
+$\to ((x \in A \wedge x \notin A) \vee (x\in A \wedge x\notin B)) \vee ((x \in B \wedge x \notin B) \vee (x\in B \wedge x\notin A))$\\
+$\to (F \vee (x\in A \wedge x\notin B)) \vee (F \vee (x\in B \wedge x\notin A))$\\
+$\to (x\in A \wedge x\notin B) \vee (x\in B \wedge x\notin A)$\\
+$\to (x \in A-B) \vee (x \in B-A)$\\
+$\to x \in A \triangle B$\\
+
+\item
+\noindent 12.14 To prove $A - \emptyset = A$
+\textbf{\begin{enumerate}[(a).]
+    \item \textit{$x \in A - \emptyset \longrightarrow x \in A$}
+    \item \textit{$x \in A \longrightarrow x \in A - \emptyset$}
+\end{enumerate}}
+\noindent \textbf{Proof of (a):}  Assume that $x \in A - \emptyset$.\\
+$\to x\in A \wedge x\notin \emptyset$\\
+$\to x\in A$\\
+\textbf{\noindent \textbf{Proof of (b):}  Assume that $x \in A$.}\\
+NTS $x\in A \wedge x\notin \emptyset$\\
+$\to x\notin \emptyset$\\
+$\to x\in A \wedge x\notin \emptyset$\\
+To prove $\emptyset - A = \emptyset$
+$\emptyset - A \subseteq \emptyset \wedge \emptyset \subseteq \emptyset - A$\\
+$\to \emptyset - A = \emptyset $\\
+
+\vspace{0.15in}
+\noindent 12.15 To prove $A \triangle A= \emptyset$\\
+\textbf{\begin{enumerate}[(a).]
+    \item \textit{$x \in A \triangle A \longrightarrow x \in \emptyset$}
+    \item \textit{$x \in \emptyset \longrightarrow x \in A \triangle A$}
+\end{enumerate}}
+\noindent \textbf{Proof of (a):}  Assume that $x \in A \triangle A$.\\
+$\to x \in A-A$\\
+$\to x \in \emptyset$\\
+\noindent \textbf{Proof of (b):}  Assume that $x \in \emptyset$.\\
+$\to x \in A-A$\\
+$\to x \in A \triangle A$\\
+\vspace{0.15in}
+To prove $A \triangle \emptyset= A$
+\textbf{\begin{enumerate}[(a).]
+    \item \textit{$x \in A \triangle \emptyset \longrightarrow x \in A$}
+    \item \textit{$x \in A \longrightarrow x \in A \triangle \emptyset$}
+\end{enumerate}}
+\noindent \textbf{Proof of (a):}  Assume that $x \in A \triangle \emptyset$.\\
+$\to x \in (A-\emptyset) \cup (\emptyset-A)$\\
+$\to x \in A\cup \emptyset$\\
+$\to x \in A$\\
+\noindent \textbf{Proof of (b):}  Assume that $x \in A$.\\
+NTS $x \in (A-\emptyset) \cup (\emptyset-A)$\\
+$A=A\cup \emptyset$
+$\to x \in A \cup \emptyset$\\
+$\to x \in A \triangle \emptyset$\\
+
+\item
+\noindent 12.21(a) F $A={1,2,3},B={2},C={3},A-(B-C)={1,3},(A-B)-C={1}$\\
+\noindent 12.21(b) T \\
+\noindent 12.21(c) F $A={1,2,3},B={2},C={3},A-(B-C)={1,3}, (A \cup B)-C={1,2}, (A-C) \cap (B-C)={2}$\\
+\noindent 12.21(d) F $A={1,2,3},B={1,2,3},C={4},B-C={1,2,3}=A,A \cup C={1,2,3,4} \neq B$\\
+\noindent 12.21(e) F $A={1,2,3},B={1,2,3},C={3},A \cup C ={1,2,3}=B,B-C={1,2} \neq A$\\
+\noindent 12.21(f) F $A={1,2},B={2,3}, |A-B|=1, |A|-|B|=0$\\
+\noindent 12.21(g) F $A={1,2},B={2,3}, A-B={1}, (A-B) \cup B={1,2,3} \neq A$\\
+\noindent 12.21(h) F $A={1,2},B={2,3}, (A \cup B)-B={1} \neq A$\\
+
+\item
+\noindent \textbf{Proof of (a):} Assume that $x \in A - (B \cup C).$\\
+NTS $x \in (A - B) \cap (A - C)$\\
+$\to x \in A \wedge x \notin (B \cup C)$\\
+$\to x \in A \wedge x \notin B \wedge x\notin C$\\
+$\to (x \in A \wedge x \notin B) \wedge (x \in A \wedge x \notin C$\\
+$\to x \in (A-B) \wedge X \in (A-C)$\\
+$\to x \in (A - B) \cap (A - C)$\\
+\vspace{0.15in}
+\noindent \textbf{Proof of (b):} Assume that $x \in (A - B) \cap (A - C)$\\
+NTS $x \in A - (B \cup C).$
+$\to x \in (A-B) \wedge X \in (A-C)$\\
+$\to (x \in A \wedge x \notin B) \wedge (x \in A \wedge x \notin C)$\\
+$\to x \in A \wedge (x \notin B \wedge x\notin C)$\\
+$\to x \in A \wedge x \notin (B \cup C)$\\
+$\to x \in A - (B \cup C)$\\
+
+\item
+Let $D=A \cup B$\\
+LHS=$|Z \cup C|$\\
+$|Z \cup C|=|Z|+|C|-|Z \cap C|$\\
+$=|A \cup B|+|C|-|A\cup B|\cap C$\\
+$=|A|+|B|-|A\cap B|+|C|-|(A\cap C)\cup(B \cap C)|$\\
+$=|A|+|B|-|A\cap B|+|C|-|A\cap C|-|B\cap C|+|(A\cap C)\cap(A\cap B)|$\\
+$=|A|+|B|+|C|-|A\cap B|-|A\cap C|-|B\cap C|+|A\cap B\cap C|=RHS$\\
+
+\item
+\noindent 14.1(a) $(1,2),(1,3),(1,4),(1,5),(2,3),(2,4),(2,5),(3,4),(3,5),(4,5)$\\
+\noindent 14.1(b) $(1,1),(1,2),(1,3),(1,4),(1,5),(2,2),(2,4),(3,3),(4,4),(5,5)$\\
+\noindent 14.1(c) $(1,1),(2,2),(3,3),(4,4),(5,5)$\\
+\noindent 14.1(d) $(1,1),(1,3),(1,5),(2,2),(2,4),(3,1),(3,3),(3,5),(4,2),(4,4),(5,1),(5,3),(5,5)$\\
+\noindent 14.2(a) For $a,b \in \{1,2,3,4,5\}, (a,b) \in R$ iff $b-a=1$\\
+\noindent 14.2(b) For $a,b \in \{1,2,3,4,5\}, (a,b) \in R$ iff $a \geq b$\\
+\noindent 14.2(c) For $a,b \in \{1,2,3,4,5\}, (a,b) \in R$ iff $a+b=6$\\
+\noindent 14.2(d) For $a,b \in \{1,2,3,4,5\}, (a,b) \in R$ iff $a|b$\\
+
+\item
+\noindent 14.3(a) reflexive, symmetric, antisymmetric, transitive\\
+\vspace{0.05in}
+For irreflexive, x=1,1 R 1=T\\
+\noindent 14.3(b) irreflexive, antisymmetric\\
+For reflexive, x=1, 1 R 1=F\\
+For symmetric, $(1,2)\in R, (2,1) \notin R$\\
+\vspace{0.05in}
+For transitive, $(1,2),(2,3) \in R, (2,3) \notin R$\\
+\noindent 14.3(c) antisymmetric, transitive\\
+For reflexive, x=2, 2 R 2=F\\
+For irreflexive, x=1,1 R 1=T\\
+\vspace{0.05in}
+For symmetric, $(1,2)\in R, (2,1) \notin R$\\
+\noindent 14.3(d) symmetric\\
+For reflexive, x=2, 2 R 2=F\\
+For irreflexive, x=1,1 R 1=T\\
+For antisymmetric, $(1,2)\in R, (2,1) \in R,1 \neq 2$\\
+\vspace{0.05in}
+For transitive, $(1,1),(1,2) \in R, (1,2) \notin R$\\
+\noindent 14.3(e) reflexive, symmetric, transitive\\
+For irreflexive, x=1,1 R 1=T\\
+\vspace{0.05in}
+For antisymmetric, $(1,2)\in R, (2,1) \in R,1 \neq 2$\\
+\noindent 14.4(a) reflexive, symmetric, transitive\\
+\noindent 14.4(b) irreflexive, antisymmetric\\
+\noindent 14.4(c) reflexive, symmetric, transitive\\
+\noindent 14.4(d) reflexive, symmetric\\
+\noindent 14.4(e) irreflexive, symmetric\\
+\noindent 14.4(f) irreflexive, antisymmetric\\
+
+\end{enumerate}
+\end{document}
